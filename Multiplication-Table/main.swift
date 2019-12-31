@@ -8,5 +8,16 @@
 
 import Foundation
 
-print("Hello, World!")
+func gugu(number: Int) {
+    var gugudan = [Int].init(repeating: 0, count: 9)
+    
+    for i in 0..<gugudan.count {
+        gugudan[i] = number * (i + 1)
+    }
 
+    gugudan.enumerated().forEach { (index, result) in
+        print("\(number) X \(index + 1) = \(result)")
+    }
+}
+
+gugu(number: 4)
